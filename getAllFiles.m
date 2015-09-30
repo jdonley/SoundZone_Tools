@@ -1,4 +1,25 @@
 function fileList = getAllFiles(dirName)
+%GETALLFILES Retrieves a list of all files within a directory
+% 
+% Syntax:	fileList = getAllFiles(dirName)
+% 
+% Inputs: 
+%       dirName - 
+%
+% Outputs: 
+%       fileList - 
+%
+% Example: 
+% 
+% See also: 
+
+% Author: Jacob Donley
+% University of Wollongong
+% Email: jrd089@uowmail.edu.au
+% Date: 22 January 2015
+% Revision: 0.1
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
   dirData = dir(dirName);      %# Get the data for the current directory
   dirIndex = [dirData.isdir];  %# Find the index for directories
