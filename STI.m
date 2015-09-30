@@ -20,13 +20,13 @@ function [ STI_val, ALcons, STI_val_approx, ALcons_approx ] = STI( ImpulseRespon
 % Example: 
 %   y=sinc(-7999:8000);
 % 	fs=44100;
-% 	[STI,ALcons,STI_,ALcons_]=Tools.STI(y,fs)
+% 	[STI,ALcons,STI_,ALcons_]=STI(y,fs)
 % 	fs=16000;
-% 	[STI,ALcons,STI_,ALcons_]=Tools.STI(y,fs)
+% 	[STI,ALcons,STI_,ALcons_]=STI(y,fs)
 % 	fs=8000;
-% 	[STI,ALcons,STI_,ALcons_]=Tools.STI(y,fs)
+% 	[STI,ALcons,STI_,ALcons_]=STI(y,fs)
 % 
-% See also: List related files here
+% See also: STI_BandFilters.m, extractIR.m, synthSweep.m
 
 % Author: Jacob Donley
 % University of Wollongong
@@ -37,15 +37,13 @@ function [ STI_val, ALcons, STI_val_approx, ALcons_approx ] = STI( ImpulseRespon
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % 1. Take the full bandwidth impulse response, run it through octave band filters
-if nargin < 3
-    BandsPerOctave = 1;
-    N = 6;           % Filter Order
-    F0 = 1000;       % Center Frequency (Hz)
-    f = fdesign.octave(BandsPerOctave,'Class 1','N,F0',N,F0,fs);
-    F0 = validfrequencies(f);
-    F0(F0<125)=[]; F0(F0>min([8000,fs/2]))=[]; % Only keep bands in the range required for the STI calculation
-    Nfc = length(F0);
-end
+BandsPerOctave = 1;
+N = 6;           % Filter Order
+F0 = 1000;       % Center Frequency (Hz)
+f = fdesign.octave(BandsPerOctave,'Class 1','N,F0',N,F0,fs);
+F0 = validfrequencies(f);
+F0(F0<125)=[]; F0(F0>min([8000,fs/2]))=[]; % Only keep bands in the range required for the STI calculation
+Nfc = length(F0);
 
 for i=1:Nfc
     if nargin < 3
