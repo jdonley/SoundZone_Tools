@@ -2,7 +2,7 @@
 Sound Zone Tools
 
 File name | Description
-----------|:----------:
+:--------:|------------
 _ALcons2STI.m_ | UNTITLED Summary of this function goes here
 _Correlated_Normalisation.m_ | CORRELATED_NORMALISATION Matches the amplitude of X using cross
 _Dropbox.m_ | DROPBOX Function to start and kill dropbox
