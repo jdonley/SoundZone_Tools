@@ -1,4 +1,5 @@
 function d = stoi(x, y, fs_signal)
+%STOI The Short-Time Objective Intelligibility measure 
 %   d = stoi(x, y, fs_signal) returns the output of the short-time
 %   objective intelligibility (STOI) measure described in [1, 2], where x 
 %   and y denote the clean and processed speech, respectively, with sample

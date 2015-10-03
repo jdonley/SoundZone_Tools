@@ -23,7 +23,7 @@ _pesq3.m_ | PESQ3 A wrapper for the objective Perceptual Evaluation of Speech Qu
 _showTimeToCompletion.m_ | SHOWTIMETOCOMPLETION Prints the time to completion and expected finish of a looped simulation based on linear extrapolation.
 _STI.m_ | STI Calculation of the Speech Transmission Index (STI)
 _STI_BandFilters.m_ | STI_BandFilters Calculation of the Speech Transmission Index (STI) Band
-_stoi.m_ | d = stoi(x, y, fs_signal) returns the output of the short-time
+_stoi.m_ | STOI The Short-Time Objective Intelligibility measure 
 _stoi_d2percCorr.m_ | STOI_D2PERCCORR Converts the stoi measure, d, to percent words correct unit
 _synthSweep.m_ | SYNTHSWEEP Synthesize a logarithmic sine sweep.
 _wait_for_file.m_ | WAIT_FOR_FILE A forceful method to wait for a file to finish being written to
