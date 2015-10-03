@@ -8,23 +8,22 @@ _ALcons2STI.m_ | ALCONS2STI Converts Articulation Loss of Consonants (ALcons) to
 _confidence_intervals.m_ | CONFIDENCE_INTERVALS Find the confidence intervals for a set of data for use with the errorbar function in MATLAB
 _Correlated_Normalisation.m_ | CORRELATED_NORMALISATION Matches the amplitude of X using cross-correlation
 _Dropbox.m_ | DROPBOX Function to start and kill dropbox
-_extractIR.m_ | 
+_extractIR.m_ | EXTRACTIR Extract impulse response from swept-sine response.
 _fconv.m_ | FCONV Fast Parallelised Convolution
-_fdeconv.m_ | FCONV Fast Parallelised Deconvolution
+_fdeconv.m_ | FDECONV Fast Parallelised Deconvolution
 _generateNoise.m_ | ADDNOISE Summary of this function goes here
 _getAllFiles.m_ | GETALLFILES Retrieves a list of all files within a directory
-_ImpResp.m_ | IMPRESP Summary of this function goes here
-_interpFromVal_2D.m_ | INTERPVAL Summary of this function goes here
-_interpVal.m_ | INTERPVAL Summary of this function goes here
-_interpVal_2D.m_ | INTERPVAL Summary of this function goes here
+_ImpResp.m_ | IMPRESP This function has not yet been completed
+_interpFromVal_2D.m_ | INTERPFROMVAL_2D This function will interpolate from desired z-axis values and return the interpolation indices for them in the y-axis
+_interpVal.m_ | INTERPVAL This function will interpolate from desired abitrarily spaced index values
+_interpVal_2D.m_ | INTERPVAL_2D This function will interpolate from desired abitrarily spaced index values in a 2D array
 _MiKTeX_FNDB_Refresh.m_ | MiKTeX_FNDB_Refresh Function to refresh the File Name DataBase in MiKTeX
 _pesq2.m_ | PESQ objective speech quality measure
-_pesq3.m_ | 
-_showTimeToCompletion.m_ | SHOWTIMETOCOMPLETION Summary of this function goes here
-_SineSweepExp.m_ | EXPSINESWEEP Summary of this function goes here
+_pesq3.m_ | PESQ3 A wrapper for the objective Perceptual Evaluation of Speech Quality measure
+_showTimeToCompletion.m_ | SHOWTIMETOCOMPLETION Prints the time to completion and expected finish of a looped simulation based on linear extrapolation.
 _STI.m_ | STI Calculation of the Speech Transmission Index (STI)
 _STI_BandFilters.m_ | STI_BandFilters Calculation of the Speech Transmission Index (STI) Band
 _stoi.m_ | d = stoi(x, y, fs_signal) returns the output of the short-time
 _stoi_d2percCorr.m_ | STOI_D2PERCCORR Converts the stoi measure, d, to percent words correct unit
-_synthSweep.m_ | 
-_wait_for_file.m_ | 
+_synthSweep.m_ | SYNTHSWEEP Synthesize a logarithmic sine sweep.
+_wait_for_file.m_ | WAIT_FOR_FILE A forceful method to wait for a file to finish being written to

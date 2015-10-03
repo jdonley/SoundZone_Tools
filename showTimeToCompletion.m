@@ -1,24 +1,33 @@
 function [ num_curr_char ] = showTimeToCompletion( percent_complete, num_prev_char )
-%SHOWTIMETOCOMPLETION Summary of this function goes here
+%SHOWTIMETOCOMPLETION Prints the time to completion and expected finish of a looped simulation based on linear extrapolation.
 % 
-% Syntax:	SHOWTIMETOCOMPLETION(INPUTARGS) Explain usage here
+% Syntax:	[ num_curr_char ] = showTimeToCompletion( percent_complete, num_prev_char )
+%   Note that before using this function in a loop the in-built MATLAB
+%   function tic should be called.
 % 
 % Inputs: 
-% 	input1 - Description
-% 	input2 - Description
-% 	input3 - Description
+% 	percent_complete - A decimal number between 0 and 1 representing the
+% 	percentage completion.
+% 	num_prev_char - Number of previous characters printed to the screen
+% 	(Usually ok to begin with 0 and then reuse num_curr_char)
 % 
 % Outputs: 
-% 	output1 - Description
-% 	output2 - Description
-% 
+% 	num_curr_char - Number of characters printed to the screen. Usually
+% 	feed this number back into this function on the next iteration or
+% 	increment appropriately if other characters have been printed between
+% 	function calls.
+%
 % Example: 
-% 	Line 1 of example
-% 	Line 2 of example
-% 	Line 3 of example
+%       fprintf('\tCompletion: ');
+%       n=0; tic;
+%       len=1e2;
+%       for i = 1:len
+%           pause(1);
+%           n = showTimeToCompletion( i/len, n);
+%       end
 % 
-% See also: List related files here
-
+% See also: tic, toc
+%
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au

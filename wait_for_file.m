@@ -1,4 +1,21 @@
 function wait_for_file( file_string )
+%WAIT_FOR_FILE A forceful method to wait for a file to finish being written to
+% 
+% Syntax:	wait_for_file( file_string )
+% 
+% Inputs: 
+% 	file_string - Absolute or relative path for the file to wait for
+% 
+%
+% Author: Jacob Donley
+% University of Wollongong
+% Email: jrd089@uowmail.edu.au
+% Copyright: Jacob Donley 2015
+% Date: 03 October 2015 
+% Revision: 0.1
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 fid = fopen(file_string,'r');
 while fid==-1
     fid = fopen(file_string,'r');

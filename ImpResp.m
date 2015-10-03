@@ -1,5 +1,5 @@
 function [ h ] = ImpResp( original, degraded, fs )
-%IMPRESP Summary of this function goes here
+%IMPRESP This function has not yet been completed
 % 
 % Syntax:	[OUTPUTARGS] = IMPRESP(INPUTARGS) Explain usage here
 % 

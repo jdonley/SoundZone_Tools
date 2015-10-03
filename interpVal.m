@@ -1,6 +1,31 @@
 function [ interpolated_values,  interpolated_indices] = interpVal( values, index_values, desired_index_values )
-%INTERPVAL Summary of this function goes here
-%   Detailed explanation goes here
+%INTERPVAL This function will interpolate from desired abitrarily spaced index values
+% 
+% Syntax:	[ interpolated_values,  interpolated_indices] = interpVal( values, index_values, desired_index_values )
+% 
+% Inputs: 
+% 	values - A 1D array of values to interpolate between
+% 	index_values - The axis values of the array
+%   desired_index_values - The desired axis values to interpolate to
+%   (Can be spaced abitrarily)
+% 
+% Outputs: 
+%   interpolated_values - The new interpolated values
+% 	interpolated_indices - The new interpolated indices
+% 
+% Example: 
+% 
+% See also: List related files here
+
+% Author: Jacob Donley
+% University of Wollongong
+% Email: jrd089@uowmail.edu.au
+% Copyright: Jacob Donley 2015
+% Date: 03 October 2015 
+% Revision: 0.1
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 interpolated_indices = zeros(length(desired_index_values),1);
 
 % interpolated_values  = zeros(length(desired_index_values),1);
@@ -35,8 +60,6 @@ interpolated_indices = zeros(length(desired_index_values),1);
 
     interpolated_values = interp1(values, interpolated_indices);
     
-    
-%     fprintf( 'interpVal:\t\t\tinterpolated_indices diff = %f\n', norm(a-interpolated_indices));
-%     fprintf( 'interpVal:\t\t\tinterpolated_values  diff = %f\n', norm(b-interpolated_values));
+   
 end
 

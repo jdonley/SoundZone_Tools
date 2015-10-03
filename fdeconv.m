@@ -1,6 +1,6 @@
 function [h]=fdeconv(x, y)
-%FCONV Fast Parallelised Deconvolution
-%   [h] = FDECONV(x, y) deconvolves x and y
+%FDECONV Fast Parallelised Deconvolution
+%   [h] = FDECONV(x, y) deconvolves x and y in the frequency domain
 %
 %      x = input vector (original)
 %      y = input vector (altered)

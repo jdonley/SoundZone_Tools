@@ -1,6 +1,6 @@
 function [y]=fconv(x, h)
 %FCONV Fast Parallelised Convolution
-%   [y] = FCONV(x, h) convolves x and h, and normalizes the output  
+%   [y] = FCONV(x, h) convolves x and h in the frequency domain
 %         to +-1.
 %
 %      x = input vector

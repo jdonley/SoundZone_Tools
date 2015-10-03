@@ -1,18 +1,20 @@
-function fileList = getAllFiles(dirName)
+function fileList = getAllFiles(dirPath)
 %GETALLFILES Retrieves a list of all files within a directory
 % 
 % Syntax:	fileList = getAllFiles(dirName)
 % 
 % Inputs: 
-%       dirName - 
+%       dirPath - The relative or full path of the directory to recursivley
+%       search.
 %
 % Outputs: 
-%       fileList - 
+%       fileList - A cell array list of the full path for each file found.
 %
 % Example: 
+%       searchPath = [matlabroot filesep 'examples'];
+%       files = getAllFiles(searchPath);
+%
 % 
-% See also: 
-
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
@@ -21,19 +23,37 @@ function fileList = getAllFiles(dirName)
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-  dirData = dir(dirName);      %# Get the data for the current directory
-  dirIndex = [dirData.isdir];  %# Find the index for directories
+% Just incase this function tries to recursively call within a class folder we
+% should create a function handle for this function to use
+inf = dbstack('-completenames');
+funcName = inf.name;
+funcPath = inf.file;
+classDirs = getClassDirs(funcPath);
+thisFuncHandle = str2func([classDirs funcName]);
+
+% Find the files
+  dirData = dir(dirPath);      % Get the data for the current directory
+  dirIndex = [dirData.isdir];  % Find the index for directories
   fileList = {dirData(~dirIndex).name}';  %'# Get a list of the files
   if ~isempty(fileList)
-    fileList = cellfun(@(x) fullfile(dirName,x),...  %# Prepend path to files
+    fileList = cellfun(@(x) fullfile(dirPath,x),...  % Prepend path to files
                        fileList,'UniformOutput',false);
   end
-  subDirs = {dirData(dirIndex).name};  %# Get a list of the subdirectories
-  validIndex = ~ismember(subDirs,{'.','..'});  %# Find index of subdirectories
-                                               %#   that are not '.' or '..'
-  for iDir = find(validIndex)                  %# Loop over valid subdirectories
-    nextDir = fullfile(dirName,subDirs{iDir});    %# Get the subdirectory path
-    fileList = [fileList; Tools.getAllFiles(nextDir)];  %# Recursively call getAllFiles
+  subDirs = {dirData(dirIndex).name};  % Get a list of the subdirectories
+  validIndex = ~ismember(subDirs,{'.','..'});  % Find index of subdirectories that are not '.' or '..'
+  for iDir = find(validIndex)                  % Loop over valid subdirectories
+    nextDir = fullfile(dirPath,subDirs{iDir});    % Get the subdirectory path
+    fileList = [fileList; thisFuncHandle(nextDir)];  % Recursively call getAllFiles
   end
 
+end
+
+function classDirs = getClassDirs(FullPath)
+    classDirs = '';
+    classes = strfind(FullPath,'+');
+    for c = 1:length(classes)
+        clas = FullPath(classes(c):end);
+        stp = strfind(clas,filesep);
+       classDirs = [classDirs  clas(2:stp(1)-1) '.'];
+    end
 end

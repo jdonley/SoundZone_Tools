@@ -1,4 +1,29 @@
 function [ res ] = pesq3( reference_sig, degraded_sig, Fs, fileNum )
+%PESQ3 A wrapper for the objective Perceptual Evaluation of Speech Quality measure
+% 
+% Syntax:	[ res ] = pesq3( reference_sig, degraded_sig, Fs, fileNum )
+% 
+% Inputs: 
+% 	reference_sig - Reference (clean, talker, sender) speech signal
+% 	degraded_sig - Degraded (noisy, listener, receiver) speech signal
+% 	Fs - Sampling Frequency
+%   fileNum - An ID number to append to the temporary audio files. Useful
+%   when several instances are to be run together (in parallel).
+% 
+% Outputs: 
+% 	res - Raw PESQ result
+% 
+% See also: pesq2mos.m
+
+% Author: Jacob Donley
+% University of Wollongong
+% Email: jrd089@uowmail.edu.au
+% Copyright: Jacob Donley 2015
+% Date: 03 October 2015 
+% Revision: 0.1
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 if nargin < 4
     fileNum = 0;
 end

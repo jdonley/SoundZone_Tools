@@ -1,19 +1,23 @@
 function [n_] = generateNoise( x, level, type, add )
 %ADDNOISE Summary of this function goes here
 % 
-% Syntax:	[OUTPUTARGS] = ADDNOISE(INPUTARGS) Explain usage here
+% Syntax:	[n_] = GENERATENOISE( x, level, type, add ) Pass the signal, x, level
+% and type of noise to the function and n_ will be the resulting noise.
+% Alternatively you can specify whether to add the noise to the input
+% signal and return the sum of the two using the 'add' argument.
 % 
 % Inputs: 
-% 	x - The input signal to add noise to
+% 	x - The input signal to base the level of generated noise on. Or
+% 	alternatively add the noise to.
 % 	level - The noise in dB relative to the input signal
-% 	type - The type of noise to add
-%   add - true if input is added to noise, false otherwise
+% 	type - The type of noise to add (e.g. 'UWGN' for Uniform White Gaussian
+% 	Noise)
+%   add - true if input is added to noise, false (default) to return just the noise
 % 
 % Outputs: 
 % 	n_ - The generated noise signal
 % 
 %
-
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
