@@ -3,10 +3,10 @@ Sound Zone Tools
 
 File name | Description
 :--------:|------------
-_addNoise.m_ | ADDNOISE Summary of this function goes here
-_ALcons2STI.m_ | UNTITLED Summary of this function goes here
-_confidence_intervals.m_ | % Use return value with the errorbar function as follows
-_Correlated_Normalisation.m_ | CORRELATED_NORMALISATION Matches the amplitude of X using cross
+_addNoise.m_ | ADDNOISE Adds a given level and type of noise to a signal
+_ALcons2STI.m_ | ALCONS2STI Converts Articulation Loss of Consonants (ALcons) to the Speech Transmission Index (STI)
+_confidence_intervals.m_ | CONFIDENCE_INTERVALS Find the confidence intervals for a set of data for use with the errorbar function in MATLAB
+_Correlated_Normalisation.m_ | CORRELATED_NORMALISATION Matches the amplitude of X using cross-correlation
 _Dropbox.m_ | DROPBOX Function to start and kill dropbox
 _extractIR.m_ | 
 _fconv.m_ | FCONV Fast Parallelised Convolution

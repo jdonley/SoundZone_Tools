@@ -1,7 +1,25 @@
 function [ res, cmd_out ] = Dropbox( action )
 %DROPBOX Function to start and kill dropbox
+% 
+% Syntax:   [ res, cmd_out ] = Dropbox( action )
+% 
+% Inputs: 
+% 	action - Action to perform. Either 'start' or 'kill.
+% 
+% Outputs: 
+% 	res - Command exit status
+% 	cmd_out - Output of the operating system command
+% 
+% Author: Jacob Donley
+% University of Wollongong
+% Email: jrd089@uowmail.edu.au
+% Copyright: Jacob Donley 2015
+% Date: 3 October 2015 
+% Revision: 0.1
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-switch action
+switch lower(action)
     case 'start'
         [res, cmd_out] = dos('start "" "%APPDATA%\Dropbox\bin\Dropbox.exe" & exit');
         disp('... Started Dropbox');

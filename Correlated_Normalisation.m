@@ -1,8 +1,7 @@
 function [ X_Approx_Adjust, Scaling_Factor ] = Correlated_Normalisation( X, X_Approx )
-%CORRELATED_NORMALISATION Matches the amplitude of X using cross
-%correlation
+%CORRELATED_NORMALISATION Matches the amplitude of X using cross-correlation
 % 
-% Syntax:	[ X_Approx_Adjust, Scaling_Factor ] = CORRELATED_NORMALISATION( X, X_Approx ) Explain usage here
+% Syntax:	[ X_Approx_Adjust, Scaling_Factor ] = CORRELATED_NORMALISATION( X, X_Approx )
 % 
 % Inputs: 
 % 	X - Original signal
@@ -13,8 +12,6 @@ function [ X_Approx_Adjust, Scaling_Factor ] = Correlated_Normalisation( X, X_Ap
 % 	matching the original signal
 % 	Scaling_Factor - The adjustment factor required
 % 
-% See also: List related files here
-
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
