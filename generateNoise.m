@@ -10,8 +10,7 @@ function [n_] = generateNoise( x, level, type, add )
 % 	x - The input signal to base the level of generated noise on. Or
 % 	alternatively add the noise to.
 % 	level - The noise in dB relative to the input signal
-% 	type - The type of noise to add (e.g. 'UWGN' for Uniform White Gaussian
-% 	Noise)
+% 	type - The type of noise to add (e.g. 'WGN' for White Gaussian Noise)
 %   add - true if input is added to noise, false (default) to return just the noise
 % 
 % Outputs: 
@@ -28,7 +27,7 @@ function [n_] = generateNoise( x, level, type, add )
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 if nargin < 3
-    type = 'UWGN'; % Uniform White Gaussian Noise
+    type = 'WGN'; % White Gaussian Noise
 end
 if nargin < 4
     add = false;
@@ -43,9 +42,17 @@ level_mag = db2mag(level);
 % Seed random number generator based on the current time
 rng('shuffle');
 
-if strcmp(type,'UWGN')
+if strcmp(type,'UWN') % Uniform White Noise
    
-    noise_ = rand( size(x) ) * 2 - 1; % UWGN: -1 to 1
+    noise_ = rand( size(x) ) * 2 - 1; % UWN: -1 to 1
+    if ~add
+        x = 0;
+    end
+    n_ = x + max_val * noise_ * level_mag;
+    
+elseif strcmp(type,'WGN') % White Gaussian Noise
+    
+    noise_ = randn( size(x) ) / (2*pi); % WGN
     if ~add
         x = 0;
     end

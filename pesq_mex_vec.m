@@ -1,7 +1,7 @@
-function [ res ] = pesq3( reference_sig, degraded_sig, Fs, fileNum )
-%PESQ3 A wrapper for the objective Perceptual Evaluation of Speech Quality measure
+function [ res ] = pesq_mex_vec( reference_sig, degraded_sig, Fs, fileNum )
+%PESQ_MEX_VEC Accepts vectors for a mex compiled version of the objective Perceptual Evaluation of Speech Quality measure
 % 
-% Syntax:	[ res ] = pesq3( reference_sig, degraded_sig, Fs, fileNum )
+% Syntax:	[ res ] = pesq_mex_vec( reference_sig, degraded_sig, Fs, fileNum )
 % 
 % Inputs: 
 % 	reference_sig - Reference (clean, talker, sender) speech signal
@@ -11,7 +11,7 @@ function [ res ] = pesq3( reference_sig, degraded_sig, Fs, fileNum )
 %   when several instances are to be run together (in parallel).
 % 
 % Outputs: 
-% 	res - Raw PESQ result for narrowband and MOS-LQO result for wideband
+% 	res - MOS-LQO result for wideband
 % 
 % See also: pesq2mos.m
 
@@ -19,7 +19,7 @@ function [ res ] = pesq3( reference_sig, degraded_sig, Fs, fileNum )
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
 % Copyright: Jacob Donley 2015
-% Date: 03 October 2015 
+% Date: 20 October 2015 
 % Revision: 0.1
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,10 +38,9 @@ max_val = max(abs([reference_sig(:); degraded_sig(:)]));
 audiowrite([temp_path ref_path], reference_sig / max_val, Fs);
 audiowrite([temp_path deg_path], degraded_sig / max_val, Fs);
 
-res = pesq2_mtlb(ref_path, ...
-                 deg_path, ...
-                 Fs, 'wb', [pwd filesep '+Tools\pesq_NoResFile.exe'], ...
-                 temp_path);
-
+res = Tools.pesq_mex(['+' num2str(Fs)], ...
+                    '+wb', ...
+                    [temp_path ref_path], ...
+                    [temp_path deg_path]);         
 end
 
