@@ -15,11 +15,12 @@ _generateNoise.m_ | ADDNOISE Summary of this function goes here
 _getAllFiles.m_ | GETALLFILES Retrieves a list of all files within a directory
 _ImpResp.m_ | IMPRESP This function has not yet been completed
 _interpFromVal_2D.m_ | INTERPFROMVAL_2D This function will interpolate from desired z-axis values and return the interpolation indices for them in the y-axis
-_interpVal.m_ | INTERPVAL This function will interpolate from desired abitrarily spaced index values
+_interpVal.m_ | INTERPVAL This function will interpolate from desired arbitrarily spaced index values
 _interpVal_2D.m_ | INTERPVAL_2D This function will interpolate from desired abitrarily spaced index values in a 2D array
 _MiKTeX_FNDB_Refresh.m_ | MiKTeX_FNDB_Refresh Function to refresh the File Name DataBase in MiKTeX
 _pesq2.m_ | PESQ objective speech quality measure
 _pesq3.m_ | PESQ3 A wrapper for the objective Perceptual Evaluation of Speech Quality measure
+_pesq_mex_vec.m_ | PESQ_MEX_VEC Accepts vectors for a mex compiled version of the objective Perceptual Evaluation of Speech Quality measure
 _showTimeToCompletion.m_ | SHOWTIMETOCOMPLETION Prints the time to completion and expected finish of a looped simulation based on linear extrapolation.
 _STI.m_ | STI Calculation of the Speech Transmission Index (STI)
 _STI_BandFilters.m_ | STI_BandFilters Calculation of the Speech Transmission Index (STI) Band
