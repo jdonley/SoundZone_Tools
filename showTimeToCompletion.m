@@ -27,7 +27,7 @@ function [ num_curr_char ] = showTimeToCompletion( percent_complete, num_prev_ch
 %       end
 % 
 % See also: tic, toc
-%
+
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au

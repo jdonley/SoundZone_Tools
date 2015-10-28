@@ -37,7 +37,9 @@ funcPath = inf.file;
 classDirs = getClassDirs(funcPath);
 interpVal_ = str2func([classDirs funcName]);
 
-% Start interpolation procedure
+
+%% Start interpolation procedure
+
 interpolated_indices = zeros(length(desired_index_values1),1);
 interpolated_index_values2  = zeros(length(desired_index_values1),1);
 

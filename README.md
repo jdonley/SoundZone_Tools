@@ -7,7 +7,7 @@ _addNoise.m_ | ADDNOISE Adds a given level and type of noise to a signal
 _ALcons2STI.m_ | ALCONS2STI Converts Articulation Loss of Consonants (ALcons) to the Speech Transmission Index (STI)
 _confidence_intervals.m_ | CONFIDENCE_INTERVALS Find the confidence intervals for a set of data for use with the errorbar function in MATLAB
 _Correlated_Normalisation.m_ | CORRELATED_NORMALISATION Matches the amplitude of X using cross-correlation
-_Dropbox.m_ | DROPBOX Function to start and kill dropbox
+_Dropbox.m_ | DROPBOX Function to start and kill dropbox from MATLAB
 _extractIR.m_ | EXTRACTIR Extract impulse response from swept-sine response.
 _fconv.m_ | FCONV Fast Parallelised Convolution
 _fdeconv.m_ | FDECONV Fast Parallelised Deconvolution
