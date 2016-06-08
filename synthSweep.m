@@ -59,22 +59,22 @@ mag = [sqrt(f1./f(1:end))];
 mag(1) = mag(2);
 
 %%% Create band pass magnitude to start and stop at desired frequencies
-[B1 A1] = butter(2,f1/(FS/2),'high' );  %%% HP at f1
-[B2 A2] = butter(2,f2/(FS/2));          %%% LP at f2
+[B1, A1] = butter(2,f1/(FS/2),'high' );  %%% HP at f1
+[B2, A2] = butter(2,f2/(FS/2));          %%% LP at f2
 
 %%% convert filters to freq domain
-[H1 W1] = freqz(B1,A1,N+1,FS);          
-[H2 W2] = freqz(B2,A2,N+1,FS);
+H1 = freqz(B1,A1,N+1,FS);          
+H2 = freqz(B2,A2,N+1,FS);
 
 %%% multiply mags to get final desired mag spectrum 
-mag = mag.*abs(H1)'.*abs(H2)';
+mag = mag .* abs(H1)' .* abs(H2)';
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%            CALCULATE DESIRED GROUP DELAY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% calc group delay for arbitrary mag spectrum with contant time envelope
+%%% calc group delay for arbitrary mag spectrum with constant time envelope
 %%% from Muller eq's 11 and 12
 C = tsweep ./ sum(mag.^2);
 Gd = C * cumsum(mag.^2);
@@ -147,18 +147,18 @@ irfft = fft(ir);
 invirfft = 1./irfft;
 
 %%% so we need to re-apply the band pass here to get rid of that
-[H1 W1] = freqz(B1,A1,length(irfft),FS,'whole');
-[H2 W2] = freqz(B2,A2,length(irfft),FS,'whole');
+H1 = freqz(B1,A1,length(irfft),FS,'whole');
+H2 = freqz(B2,A2,length(irfft),FS,'whole');
 
 %%% apply band pass filter to inverse magnitude
-invirfftmag  = abs(invirfft).*abs(H1)'.*abs(H2)';
-
-%%% get inverse phase
-invirfftphase = angle(invirfft);
-
-%%% re-synthesis inverse fft in polar form
-invirfft = invirfftmag.*exp(sqrt(-1)*invirfftphase);
-
+% invirfftmag  = abs(invirfft).*abs(H1)'.*abs(H2)';
+% 
+% %%% get inverse phase
+% invirfftphase = angle(invirfft);
+% 
+% %%% re-synthesis inverse fft in polar form
+% invirfft = invirfftmag.*exp(sqrt(-1)*invirf
+invirfft = invirfft .* abs(H1)' .* abs(H2)';
 
 %%% assign outputs
 invsweepfft = invirfft;

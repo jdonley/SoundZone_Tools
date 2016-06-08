@@ -39,7 +39,7 @@ if nargin <2
     interval = 95;	%  Confidence = 95%
 end
 
-L = length(samples);
+L = size(samples,1);
 a = 1 - interval/100;
 ts = tinv([a/2,  1-a/2],L-1);	% T-Score
 

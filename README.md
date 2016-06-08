@@ -5,6 +5,7 @@ File name | Description
 :--------:|------------
 _addNoise.m_ | ADDNOISE Adds a given level and type of noise to a signal
 _ALcons2STI.m_ | ALCONS2STI Converts Articulation Loss of Consonants (ALcons) to the Speech Transmission Index (STI)
+_ArbitraryOctaveFilt.m_ | ARBITRARYOCTAVEFILT Summary of this function goes here
 _confidence_intervals.m_ | CONFIDENCE_INTERVALS Find the confidence intervals for a set of data for use with the errorbar function in MATLAB
 _Correlated_Normalisation.m_ | CORRELATED_NORMALISATION Matches the amplitude of X using cross-correlation
 _Dropbox.m_ | DROPBOX Function to start and kill dropbox from MATLAB
@@ -17,11 +18,19 @@ _ImpResp.m_ | IMPRESP This function has not yet been completed
 _interpFromVal_2D.m_ | INTERPFROMVAL_2D This function will interpolate from desired z-axis values and return the interpolation indices for them in the y-axis
 _interpVal.m_ | INTERPVAL This function will interpolate from desired arbitrarily spaced index values
 _interpVal_2D.m_ | INTERPVAL_2D This function will interpolate from desired abitrarily spaced index values in a 2D array
+_invFIR.m_ | 
+_invimplms.m_ | syntax inv=invimplms(den,n,d)
+_invSweepFFT.m_ | INVSWEEPFFT Summary of this function goes here
+_IRcompactingKirkebyFilter.m_ | COMPACTINGKIRKEBYFILTER
+_LTASS.m_ | LTASS Computes the Long-Term Average Speech Spectrum from a folder of
 _MiKTeX_FNDB_Refresh.m_ | MiKTeX_FNDB_Refresh Function to refresh the File Name DataBase in MiKTeX
+_octaveBandMean.m_ | OCTAVEBANDMEAN Given a magnitude spectrum this function will calculate the
 _pesq2.m_ | PESQ objective speech quality measure
 _pesq3.m_ | PESQ3 A wrapper for the objective Perceptual Evaluation of Speech Quality measure
 _pesq_mex_vec.m_ | PESQ_MEX_VEC Accepts vectors for a mex compiled version of the objective Perceptual Evaluation of Speech Quality measure
+_shapeSpectrum.m_ | SHAPESPECTRUM This function will shape an input signal to the given
 _showTimeToCompletion.m_ | SHOWTIMETOCOMPLETION Prints the time to completion and expected finish of a looped simulation based on linear extrapolation.
+_sineSweepLin.m_ | SINESWEEP_LIN Summary of this function goes here
 _STI.m_ | STI Calculation of the Speech Transmission Index (STI)
 _STI_BandFilters.m_ | STI_BandFilters Calculation of the Speech Transmission Index (STI) Band
 _stoi.m_ | STOI The Short-Time Objective Intelligibility measure 

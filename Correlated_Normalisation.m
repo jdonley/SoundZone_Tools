@@ -11,7 +11,7 @@ function [ X_Approx_Adjust, Scaling_Factor ] = Correlated_Normalisation( X, X_Ap
 % 	X_Approx_Adjust - The approximate signal with a magnitude closely
 % 	matching the original signal
 % 	Scaling_Factor - The adjustment factor required
-% 
+ 
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
