@@ -1,5 +1,5 @@
 function y = ArbitraryOctaveFilt(x, SPECT, FREQS, N, fs, octBandwidth)
-%ARBITRARYOCTAVEFILT Summary of this function goes here
+%ARBITRARYOCTAVEFILT Filters a signal with any arbitrary spectrum smoothed with any fractional octave band average
 % 
 % Syntax:	[OUTPUTARGS] = ARBITRARYOCTAVEFILT(INPUTARGS) Explain usage here
 % 

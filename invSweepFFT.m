@@ -1,5 +1,5 @@
 function [ invirfft ] = invSweepFFT( y, f1, f2, fs, Nfft )
-%INVSWEEPFFT Summary of this function goes here
+%INVSWEEPFFT Obtain the FFT of an inverted exponentional sine sweep
 %   Detailed explanation goes here
 if nargin < 5
     Nfft = length(y);

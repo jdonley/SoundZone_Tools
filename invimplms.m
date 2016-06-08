@@ -1,4 +1,5 @@
 function inv=invimplms(den,n,d)
+%INVIMPLMS Inverse impulse using the Levinson-Durbin algorithm
 % syntax inv=invimplms(den,n,d)
 %         den - denominator impulse
 %         n   - length of result

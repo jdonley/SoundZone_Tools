@@ -1,6 +1,5 @@
 function [ spect, frqs ] = LTASS( folder, nfft )
-%LTASS Computes the Long-Term Average Speech Spectrum from a folder of
-%speech files
+%LTASS Computes the Long-Term Average Speech Spectrum from a folder of speech files
 % 
 % Syntax:	[ spect, frqs ] = LTASS( folder, nfft )
 % 
