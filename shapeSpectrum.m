@@ -1,6 +1,5 @@
 function [ y_shaped ] = shapeSpectrum( y, spectrum, freqs, fs )
-%SHAPESPECTRUM This function will shape an input signal to the given
-%spectrum
+%SHAPESPECTRUM This function will shape an input signal to the given spectrum (simple, unregulated spectral shaping)
 % 
 % Syntax:	[ y_shaped ] = shapeSpectrum( y, fs, spectrum )
 % 
@@ -14,10 +13,6 @@ function [ y_shaped ] = shapeSpectrum( y, spectrum, freqs, fs )
 % Outputs: 
 % 	y_shaped - The input signal shaped to the given spectrum
 % 
-% Example: 
-% 	Line 1 of example
-% 	Line 2 of example
-% 	Line 3 of example
 % 
 
 % Author: Jacob Donley
