@@ -56,7 +56,8 @@ end
 win_=rectwin(nfft);
 ovlap = 0;
 
-[spect,frqs]=pwelch(speech,win_,nfft*ovlap,nfft,fs,'power');
+[spect,frqs]=pwelch(speech,win_,nfft*ovlap,nfft,fs,'power'); % Power spectrum
+spect = sqrt(spect); % Magnitude spectrum
 
 end
 

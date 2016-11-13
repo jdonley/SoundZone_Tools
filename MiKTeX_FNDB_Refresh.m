@@ -18,7 +18,7 @@ function [ res, cmd_out ] = MiKTeX_FNDB_Refresh( )
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         
-[res, cmd_out] = system('initexmf --admin --update-fndb');
+[res, cmd_out] = system('initexmf --update-fndb');
 disp('Refreshed MiKTeX FNDB');
 
 end
