@@ -1,17 +1,19 @@
-function [sweep, invsweepfft, sweepRate] = synthSweep(T,FS,f1,f2,tail,magSpect)
+function [sweep, invsweepfft, sweepRate] = synthSweep(T,FS,f1,f2,tail,AsdB)
 % SYNTHSWEEP Synthesize a logarithmic sine sweep
-%   [sweep invsweepfft sweepRate] = SYNTHSWEEP(T,FS,f1,f2,tail,magSpect) 
+%   [sweep invsweepfft sweepRate] = SYNTHSWEEP(T,FS,f1,f2,tail,AsdB) 
 %   generates a logarithmic sine sweep that starts at frequency f1 (Hz),
 %   stops at frequency f2 (Hz) and duration T (sec) at sample rate FS (Hz).
 %    
 %   usePlots indicates whether to show frequency characteristics of the
-%   sweep, and the optional magSpect is a vector of length T*FS+1 that
-%   indicates an artificial spectral shape for the sweep to have
+%   sweep, and the optional AsdB is an amplitude suppression value in
+%   decibels to avoid clipping
 %   
 %   Developed at Oygo Sound LLC
 %
 %   Equations from Muller and Massarani, "Transfer Function Measurement
 %   with Sweeps."
+%
+%   Modified by Jacob Donley (jrd089@uowmail.edu.au) Nov 2016
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,8 +24,11 @@ function [sweep, invsweepfft, sweepRate] = synthSweep(T,FS,f1,f2,tail,magSpect)
 %%% number of samples / frequency bins
 N = real(round(T*FS));
 
-if (nargin < 5)
+if nargin < 5
     tail = 0;
+end
+if nargin < 6
+   AsdB = 0; 
 end
 
 
@@ -85,9 +90,9 @@ Gd = Gd*FS/2;   % convert from secs to samps
 %%%            CALCULATE DESIRED PHASE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-if (nargin > 5)
-    mag = linspace(0.1, 1, length(mag));
-end
+% if (nargin > 6)
+%     mag = linspace(0.1, 1, length(mag));
+% end
 
 
 %%% integrate group delay to get phase
@@ -130,8 +135,10 @@ ir(I) = zeros(1,length(I));
 ir = ir(1:end/2);
 
 %%% normalize
-ir = ir/(max(abs(ir(:))));
+ir = ir / (max(abs(ir(:))));
 
+%%% suppress output
+ir = ir * db2mag( AsdB );
 
 %%% get fft of sweep to verify that its okay and to use for inverse
 irfft = fft(ir);

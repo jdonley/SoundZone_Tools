@@ -13,19 +13,20 @@ function [irLin, irNonLin] = extractIR(sweep_response, invsweepfft)
 %
 %   Equations from Muller and Massarani, "Transfer Function Measurement
 %   with Sweeps."
+%
+%   Modified by Jacob Donley (jrd089@uowmail.edu.au) (January 2017)
 
-if(size(sweep_response,1) > 1)
-    sweep_response = sweep_response';
-end
+if diff(size(sweep_response))>0, sweep_response = sweep_response.'; end
+if diff(size(invsweepfft))>0, invsweepfft = invsweepfft.'; end
 
 N = length(invsweepfft);
 sweepfft = fft(sweep_response,N);
 
 %%% convolve sweep with inverse sweep (freq domain multiply)
-
+invsweepfft = repmat(invsweepfft,1,size(sweepfft,2));
 ir = real(ifft(invsweepfft.*sweepfft));
 
-ir = circshift(ir', length(ir)/2); 
+ir = circshift(ir, length(ir)/2, 1); 
 
-irLin = ir(end/2+1:end);
-irNonLin = ir(1:end/2);
+irLin = ir(end/2+1:end,:);
+irNonLin = ir(1:end/2,:);

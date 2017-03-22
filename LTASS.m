@@ -48,6 +48,7 @@ if isa(speech_folder_OR_vec,'char') % if a character array (string)
         end
         speech = [speech; audioSig];
     end
+    nfft = numel(speech);
 else
     speech = speech_folder_OR_vec;
 end

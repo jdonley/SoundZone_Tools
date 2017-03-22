@@ -26,6 +26,9 @@ function [pesq_val]= pesq2(ref_sig, alt_sig, fs)
 %       narrowband telephone networks and speech codecs. ITU-T
 %       Recommendation P. 862   
 %
+%   Missing functions and the original source can be downloaded here:
+%   http://ecs.utdallas.edu/loizou/speech/composite.zip
+%
 %   Authors: Yi Hu and Philipos C. Loizou 
 %   Modified by Jacob Donley
 %

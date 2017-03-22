@@ -31,7 +31,7 @@ if nargin < 6
     octBandwidth = 1/6;    
 end
 
-% Find sixth-octave averages
+% Find nth-octave averages
 [MAG,f]=Tools.octaveBandMean(SPECT,FREQS,octBandwidth);
 
 % Force even length filter
