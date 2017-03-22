@@ -23,14 +23,17 @@ _invFIR.m_ | INVFIR design inverse filter (FIR) from mono or stereo impulse resp
 _invimplms.m_ | INVIMPLMS Inverse impulse using the Levinson-Durbin algorithm
 _invSweepFFT.m_ | INVSWEEPFFT Obtain the FFT of an inverted exponentional sine sweep
 _IRcompactingKirkebyFilter.m_ | COMPACTINGKIRKEBYFILTER
+_keepFilesFromFolder.m_ | KEEPFILESFROMFOLDER Keeps files and file paths in a cell array if the file names in a given folder are found in the path string
 _LTASS.m_ | LTASS Computes the Long-Term Average Speech Spectrum from a folder of speech files or vector of speech samples
 _MiKTeX_FNDB_Refresh.m_ | MiKTeX_FNDB_Refresh Function to refresh the File Name DataBase in MiKTeX
 _octaveBandMean.m_ | OCTAVEBANDMEAN Given a magnitude spectrum this function will calculate the average (single or third) octave band magnitude
 _pesq2.m_ | PESQ objective speech quality measure
 _pesq3.m_ | PESQ3 A wrapper for the objective Perceptual Evaluation of Speech Quality measure
 _pesq_mex_vec.m_ | PESQ_MEX_VEC Accepts vectors for a mex compiled version of the objective Perceptual Evaluation of Speech Quality measure
+_printHyperlink.m_ | PRINTHYPERLINK Prints a hyperlink to the command window
 _shapeSpectrum.m_ | SHAPESPECTRUM This function will shape an input signal to the given spectrum (simple, unregulated spectral shaping)
 _showTimeToCompletion.m_ | SHOWTIMETOCOMPLETION Prints the time to completion and expected finish of a looped simulation based on linear extrapolation.
+_simpleWarning.m_ | SIMPLEWARNING Prints a coloured warning without the location information
 _sineSweepLin.m_ | SINESWEEP_LIN Synthesize a linear sine sweep
 _STI.m_ | STI Calculation of the Speech Transmission Index (STI)
 _STI_BandFilters.m_ | STI_BandFilters Calculation of the Speech Transmission Index (STI) Band Filters
