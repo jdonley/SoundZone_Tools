@@ -1,5 +1,8 @@
 # SoundZone_Tools
-Sound Zone Tools is a collection of auxiliary MATLAB tools for soundfield reproduction and other various tasks. The tools have been written by myself or collected from other open sources. If a file is missing and there is no download link in the parent file's header, please open an issue to request the link. Enjoy!
+Sound Zone Tools is a collection of auxiliary MATLAB tools for soundfield reproduction and other signal processing tasks. The tools have been written by myself or collected from other open sources. If a file is missing and there is no download link in the parent file's header, please open an issue to request the link.
+
+Don't forget to give appropriate reference to the code used, author details are usually found in the file's header.
+Enjoy!
 
 File name | Description
 :--------:|------------

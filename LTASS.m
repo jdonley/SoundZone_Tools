@@ -39,7 +39,7 @@ if isa(speech_folder_OR_vec,'char') % if a character array (string)
     for file = 1:F
         try
             [audioSig,fs_] = audioread(files{file});
-            if nargin < 3, fs = fs_; end;
+            if nargin < 3, fs = fs_; end
             audioSig = audioSig ./ rms(audioSig(:));
         catch err
             if strcmp(err.identifier, 'MATLAB:audiovideo:audioread:FileTypeNotSupported')
@@ -48,7 +48,9 @@ if isa(speech_folder_OR_vec,'char') % if a character array (string)
         end
         speech = [speech; audioSig];
     end
-    nfft = numel(speech);
+    if nargin < 2
+        nfft = numel(speech);
+    end
 else
     speech = speech_folder_OR_vec;
 end
