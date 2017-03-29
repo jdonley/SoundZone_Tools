@@ -6,8 +6,8 @@ function [ spect, frqs ] = LTASS( speech_folder_OR_vec, nfft, fs )
 % Inputs:
 % 	speech_folder_OR_vec - The path to the folder containing the speech
 %                          files OR a vector of concatenated speech signals
-%   nfft - The number of FFT points used to compute the LTASS
-%   fs - The sampling frequency to use (if not provided then the sampling
+% 	nfft - The number of FFT points used to compute the LTASS
+% 	fs - The sampling frequency to use (if not provided then the sampling
 %        frequency of the file is used)
 %
 % Outputs:

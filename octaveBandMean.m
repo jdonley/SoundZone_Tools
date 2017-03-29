@@ -7,7 +7,7 @@ function [ magSpect_oct, freqVec_oct ] = octaveBandMean( magSpect, freqVec, octS
 % 	magSpect - An arbitrary magnitude spectrum as a vector
 % 	freqVec - The corresponding frequencies for each magnitude value
 % 	octSpace - A single value between 0 and 1 specifying the octave spacing
-%   centerFreq - The center frequency for the octave band
+% 	centerFreq - The center frequency for the octave band
 % 
 % Outputs: 
 % 	magSpect_oct - The magnitude spectrum averaged per octave band
@@ -18,9 +18,9 @@ function [ magSpect_oct, freqVec_oct ] = octaveBandMean( magSpect, freqVec, octS
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
-% Copyright: Jacob Donley 2016
+% Copyright: Jacob Donley 2016, 2017
 % Date: 8 July 2016
-% Revision: 0.1
+% Revision: 0.2 (29 March 2017)
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -40,6 +40,17 @@ n = floor(log(freqVec_( 1 )/centerFreq)/log(2)/octSpace): ...
     floor(log(freqVec_(end)/centerFreq)/log(2)/octSpace);
 
 freqVec_oct = centerFreq * (2 .^ (n*octSpace));
+if freqVec_oct(end) ~= freqVec_(end)
+    % This may happen if there is no octave band that is centered at the
+    % Nyquist frequency (fs/2)
+    freqVec_oct(end+1) = freqVec_(end); % So we find an average at the 
+    % Nyquist frequency that is of the same width as the other octave bands
+    warning(['The sampling frequency used does not have a Nyquist ' ...
+    'frequency that, after division by the centre frequency, is a ' ...
+    'power of two. ' ...
+    'i.e. (' num2str(freqVec_(end)*2) '/2)/' num2str(centerFreq) ' is ' ... 
+    'not a power of two.']);
+end
 fd = 2^(octSpace/2);
 fupper = freqVec_oct * fd;
 flower = freqVec_oct / fd;
@@ -52,8 +63,8 @@ octBands = [flower' fupper'];
 
 oBandInds = permute(oBandInds, [3 2 1]);
 
-magSpect_oct = zeros(1,length(n));
-for band = 1:length(n)
+magSpect_oct = zeros(1,length(freqVec_oct));
+for band = 1:length(freqVec_oct)
     magSpect_oct(band+1) = mean(  ...
         magSpect( oBandInds(band,1):oBandInds(band,2) ) );
 end

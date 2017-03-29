@@ -1,23 +1,20 @@
 function y = ArbitraryOctaveFilt(x, SPECT, FREQS, N, fs, octBandwidth)
 %ARBITRARYOCTAVEFILT Filters a signal with any arbitrary spectrum smoothed with any fractional octave band average
 % 
-% Syntax:	[OUTPUTARGS] = ARBITRARYOCTAVEFILT(INPUTARGS) Explain usage here
+% Syntax:	Y = ARBITRARYOCTAVEFILT(X, SPECT, FREQS, N, FS, OCTBANDWIDTH)
 % 
 % Inputs: 
-% 	input1 - Description
-% 	input2 - Description
-% 	input3 - Description
+% 	x - Input signal to filter as a vector
+% 	SPECT - The spectrum to shape the input signal to
+% 	FREQS - The frequencies of each SPECT element
+% 	N - The length of the filter to usee
+% 	fs - Description
+% 	octBandwidth - Description
 % 
 % Outputs: 
-% 	output1 - Description
-% 	output2 - Description
+% 	y - Description
 % 
-% Example: 
-% 	Line 1 of example
-% 	Line 2 of example
-% 	Line 3 of example
-% 
-% See also: List related files here
+% See also: fir2, filter
 
 % Author: Jacob Donley
 % University of Wollongong
