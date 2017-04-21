@@ -19,9 +19,9 @@ function OctaveFilters = STI_BandFilters( N, fs )
 %   N = 6;
 %   H = STI_BandFilters( N, fs )
 %   tic;
-% 	[STI,ALcons,STI_,ALcons_]=STI(y,fs,H)
+% 	[STIval,ALcons,STIval_,ALcons_]=STI(y,fs,H)
 %   toc
-% 	[STI,ALcons,STI_,ALcons_]=STI(y,fs)
+% 	[STIval,ALcons,STIval_,ALcons_]=STI(y,fs)
 %   toc
 % 
 % See also: STI.m
@@ -29,9 +29,8 @@ function OctaveFilters = STI_BandFilters( N, fs )
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
-% Copyright: Jacob Donley 2015
-% Date: 30 September 2015
-% Revision: 0.1
+% Version: 1.0 (12 April 2017)
+% Version: 0.1 (30 September 2015)
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -39,8 +38,7 @@ BandsPerOctave = 1;
 F0 = 1000;       % Center Frequency (Hz)
 f = fdesign.octave(BandsPerOctave,'Class 1','N,F0',N,F0,fs);
 F0 = validfrequencies(f);
-F0(F0<125)=[]; 
-F0(F0>min([8000,fs/2]))=[]; % Only keep bands in the range required for the STI calculation
+F0(F0<125 | F0>min([8000,fs/2]))=[]; % Only keep bands in the range required for the STI calculation
 Nfc = length(F0);
 
 for i=1:Nfc

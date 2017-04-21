@@ -9,6 +9,7 @@ File name | Description
 _addNoise.m_ | ADDNOISE Adds a given level and type of noise to a signal
 _ALcons2STI.m_ | ALCONS2STI Converts Articulation Loss of Consonants (ALcons) to the Speech Transmission Index (STI)
 _ArbitraryOctaveFilt.m_ | ARBITRARYOCTAVEFILT Filters a signal with any arbitrary spectrum smoothed with any fractional octave band average
+_ConcatTIMITtalkers.m_ | CONCATTIMITTALKERS Concatenates all the talkers into single speech files in the TIMIT database
 _confidence_intervals.m_ | CONFIDENCE_INTERVALS Find the confidence intervals for a set of data for use with the errorbar function in MATLAB
 _Correlated_Normalisation.m_ | CORRELATED_NORMALISATION Matches the amplitude of X using cross-correlation
 _COSHdist.m_ | COSHDIST Finds the symmetric Itakura-Saito distance using the hyperbolic cosine function
@@ -29,7 +30,7 @@ _IRcompactingKirkebyFilter.m_ | COMPACTINGKIRKEBYFILTER
 _keepFilesFromFolder.m_ | KEEPFILESFROMFOLDER Keeps files and file paths in a cell array if the file names in a given folder are found in the path string
 _LTASS.m_ | LTASS Computes the Long-Term Average Speech Spectrum from a folder of speech files or vector of speech samples
 _MiKTeX_FNDB_Refresh.m_ | MiKTeX_FNDB_Refresh Function to refresh the File Name DataBase in MiKTeX
-_octaveBandMean.m_ | OCTAVEBANDMEAN Given a magnitude spectrum this function will calculate the average (single or third) octave band magnitude
+_octaveBandMean.m_ | OCTAVEBANDMEAN Given a magnitude spectrum this function will calculate the average (single, third, nth) octave band magnitude
 _pesq2.m_ | PESQ objective speech quality measure
 _pesq3.m_ | PESQ3 A wrapper for the objective Perceptual Evaluation of Speech Quality measure
 _pesq_mex_vec.m_ | PESQ_MEX_VEC Accepts vectors for a mex compiled version of the objective Perceptual Evaluation of Speech Quality measure

@@ -19,7 +19,7 @@ function [ spect, frqs ] = LTASS( speech_folder_OR_vec, nfft, fs )
 % Email: jrd089@uowmail.edu.au
 % Copyright: Jacob Donley 2016
 % Date: 17 June 2016
-% Revision: 0.3
+% Revision: 0.4 (30 March 2017)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -51,6 +51,10 @@ if isa(speech_folder_OR_vec,'char') % if a character array (string)
     if nargin < 2
         nfft = numel(speech);
     end
+    if logical(mod(nfft,2)) % if isodd( nfft )
+        nfft = nfft-1; % Force nfft to be even so that pwelch returns normalised frequencies [0,...,1]
+    end
+
 else
     speech = speech_folder_OR_vec;
 end
