@@ -1,10 +1,10 @@
 function ConcatTIMITtalkers( TIMITdir, OutDir )
-%CONCATTIMITTALKERS Concatenates all the talkers into single speech files in the TIMIT database
+%CONCATTIMITTALKERS Concatenates all the talkers from the TIMIT corpus into individual speech files 
 % 
 % Syntax:	CONCATTIMITTALKERS( TIMITDIR, OUTDIR )
 % 
 % Inputs: 
-% 	TIMITdir - The directory of the TIMIT database
+% 	TIMITdir - The directory of the TIMIT corpus
 % 	OutDir - The output directory to save the concatenated speech files
 % 
 % Example: 
@@ -22,7 +22,7 @@ function ConcatTIMITtalkers( TIMITdir, OutDir )
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 AudioExt = '.wav';
 
-% Get all files in the TIMIT database
+% Get all files in the TIMIT corpus
 AllFiles = getAllFiles( TIMITdir );
 
 % Limit the list to only the WAV files and sort them

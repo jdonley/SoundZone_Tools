@@ -19,7 +19,7 @@ function y = ArbitraryOctaveFilt(x, SPECT, FREQS, N, fs, octBandwidth)
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
-% Copyright: Jacob Donley 2016
+% Copyright: Jacob Donley 2017
 % Date: 06 June 2016 
 % Revision: 0.1
 % 
@@ -32,7 +32,7 @@ end
 [MAG,f]=Tools.octaveBandMean(SPECT,FREQS,octBandwidth);
 
 % Force even length filter
-if isempty(N), if mod(length(SPECT),2), N=length(SPECT)-1; else N=length(SPECT); end; end;
+if isempty(N), if mod(length(SPECT),2), N=length(SPECT)-1; else N=length(SPECT); end; end
 % Design arbitrary magnitude (linear-phase) filter
 b = fir2(N,f/(fs/2),MAG);
 % Apply filter

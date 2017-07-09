@@ -15,7 +15,7 @@ function [ X_Approx_Adjust, Scaling_Factor ] = Correlated_Normalisation( X, X_Ap
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
-% Copyright: Jacob Donley 2015
+% Copyright: Jacob Donley 2017
 % Date: 19 June 2015 
 % Revision: 0.1
 % 

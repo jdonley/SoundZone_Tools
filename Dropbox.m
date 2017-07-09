@@ -13,7 +13,7 @@ function [ res, cmd_out ] = Dropbox( action )
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
-% Copyright: Jacob Donley 2015
+% Copyright: Jacob Donley 2017
 % Date: 3 October 2015 
 % Revision: 0.1
 % 

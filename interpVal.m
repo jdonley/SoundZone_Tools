@@ -20,7 +20,7 @@ function [ interpolated_values,  interpolated_indices] = interpVal( values, inde
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
-% Copyright: Jacob Donley 2015
+% Copyright: Jacob Donley 2017
 % Date: 03 October 2015 
 % Revision: 0.1
 % 

@@ -22,7 +22,7 @@ function [E,Eps] = COSHdist(H,P)
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
-% Copyright: Jacob Donley 2016
+% Copyright: Jacob Donley 2017
 % Date: 24 October 2016 
 % Revision: 0.1
 % 

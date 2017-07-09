@@ -31,7 +31,7 @@ function [ num_curr_char, history_ ] = showTimeToCompletion( percent_complete, n
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
-% Copyright: Jacob Donley 2015
+% Copyright: Jacob Donley 2017
 % Date: 25 August 2015 
 % Revision: 0.1
 % 

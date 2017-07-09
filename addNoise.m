@@ -17,7 +17,7 @@ function [x_n] = addNoise( x, level, type )
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
-% Copyright: Jacob Donley 2015
+% Copyright: Jacob Donley 2017
 % Date: 21 August 2015 
 % Revision: 0.1
 % 

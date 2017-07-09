@@ -16,7 +16,7 @@ function [ res ] = pesq_mex_vec( reference_sig, degraded_sig, Fs )
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
-% Copyright: Jacob Donley 2016
+% Copyright: Jacob Donley 2017
 % Date: 16 June 2016
 % Revision: 0.2
 % 

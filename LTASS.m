@@ -17,7 +17,7 @@ function [ spect, frqs ] = LTASS( speech_folder_OR_vec, nfft, fs )
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
-% Copyright: Jacob Donley 2016
+% Copyright: Jacob Donley 2017
 % Date: 17 June 2016
 % Revision: 0.4 (30 March 2017)
 %

@@ -31,7 +31,7 @@ function [ Conf_intervals ] = confidence_intervals( samples, interval, islognorm
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
-% Copyright: Jacob Donley 2016
+% Copyright: Jacob Donley 2017
 % Date: 19 September 2016
 % Revision: 0.2
 % 
