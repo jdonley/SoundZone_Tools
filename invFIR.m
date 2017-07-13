@@ -1,5 +1,5 @@
 function [ih]=invFIR(type,h,Nfft,Noct,L,range,reg,window)
-%INVFIR design inverse filter (FIR) from mono or stereo impulse response
+% Design inverse filter (FIR) from mono or stereo impulse response
 % ------------------------------------------------------------------------------ 
 % description: design inverse filter (FIR) from mono or stereo impulse response
 % ------------------------------------------------------------------------------

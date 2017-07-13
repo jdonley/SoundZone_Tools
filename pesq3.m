@@ -1,5 +1,5 @@
 function [ res ] = pesq3( reference_sig, degraded_sig, Fs, fileNum )
-%PESQ3 A wrapper for the objective Perceptual Evaluation of Speech Quality measure
+% A wrapper for the objective Perceptual Evaluation of Speech Quality measure
 % 
 % Syntax:	[ res ] = pesq3( reference_sig, degraded_sig, Fs, fileNum )
 % 

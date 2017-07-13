@@ -1,5 +1,5 @@
 function [ interpolated_index_values2 ] = interpFromVal_2D( values, index_values1, index_values2, desired_index_values1, desired_values2 )
-%INTERPFROMVAL_2D This function will interpolate from desired z-axis values and return the interpolation indices for them in the y-axis
+% This function will interpolate from desired z-axis values and return the interpolation indices for them in the y-axis
 % 
 % Syntax:	[ interpolated_values ] = interpFromVal_2D( values, index_values1, index_values2, desired_index_values1, desired_index_values2 )
 % 

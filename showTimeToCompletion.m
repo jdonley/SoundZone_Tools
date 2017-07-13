@@ -1,5 +1,5 @@
 function [ num_curr_char, history_ ] = showTimeToCompletion( percent_complete, num_prev_char, history_ )
-%SHOWTIMETOCOMPLETION Prints the time to completion and expected finish of a looped simulation based on linear extrapolation.
+% Prints the time to completion and expected finish of a looped simulation based on linear extrapolation.
 % 
 % Syntax:	[ num_curr_char ] = showTimeToCompletion( percent_complete, num_prev_char )
 %   Note that before using this function in a loop the in-built MATLAB

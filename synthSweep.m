@@ -1,5 +1,5 @@
 function [sweep, invsweepfft, sweepRate] = synthSweep(T,FS,f1,f2,tail,AsdB)
-% SYNTHSWEEP Synthesize a logarithmic sine sweep
+% Synthesize a logarithmic sine sweep
 %   [sweep invsweepfft sweepRate] = SYNTHSWEEP(T,FS,f1,f2,tail,AsdB) 
 %   generates a logarithmic sine sweep that starts at frequency f1 (Hz),
 %   stops at frequency f2 (Hz) and duration T (sec) at sample rate FS (Hz).

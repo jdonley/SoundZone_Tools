@@ -1,5 +1,5 @@
 function fileList = getAllFiles(dirPath)
-%GETALLFILES Retrieves a list of all files within a directory
+% Retrieves a list of all files within a directory
 % 
 % Syntax:	fileList = getAllFiles(dirName)
 % 

@@ -1,5 +1,5 @@
 function ConcatTIMITtalkers( TIMITdir, OutDir )
-%CONCATTIMITTALKERS Concatenates all the talkers from the TIMIT corpus into individual speech files 
+% Concatenates all the talkers from the TIMIT corpus into individual speech files 
 % 
 % Syntax:	CONCATTIMITTALKERS( TIMITDIR, OUTDIR )
 % 

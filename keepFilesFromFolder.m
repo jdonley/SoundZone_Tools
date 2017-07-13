@@ -1,5 +1,5 @@
 function [Files] = keepFilesFromFolder( FileList, KeepFromFolder )
-%KEEPFILESFROMFOLDER Keeps files and file paths in a cell array if the file names in a given folder are found in the path string
+% Keeps files and file paths in a cell array if the file names in a given folder are found in the path string
 % 
 % Syntax:	[Files] = KEEPFILESFROMFOLDER(FileList,KeepFromFolder) 
 % 

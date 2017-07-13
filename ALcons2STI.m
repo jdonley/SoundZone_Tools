@@ -1,5 +1,5 @@
 function [ STIval ] = ALcons2STI( ALcons )
-%ALCONS2STI Converts Articulation Loss of Consonants (ALcons) to the Speech Transmission Index (STI)
+% Converts Articulation Loss of Consonants (ALcons) to the Speech Transmission Index (STI)
 % 
 % Syntax:	[STIval] = ALcons2STI( ALcons )
 %       Pass the Articulation Loss of Consonants (ALcons) value to the

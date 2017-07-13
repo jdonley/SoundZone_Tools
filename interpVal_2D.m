@@ -1,5 +1,5 @@
 function [ interpolated_values ] = interpVal_2D( values, index_values1, index_values2, desired_index_values1, desired_index_values2, interpolation_type )
-%INTERPVAL_2D This function will interpolate from desired abitrarily spaced index values in a 2D array
+% This function will interpolate from desired abitrarily spaced index values in a 2D array
 % 
 % Syntax:	[ interpolated_values ] = interpVal_2D( values, index_values1, index_values2, desired_index_values1, desired_index_values2, interpolation_type )
 % 

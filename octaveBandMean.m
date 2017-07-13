@@ -1,5 +1,5 @@
 function [ magSpect_oct, freqVec_oct ] = octaveBandMean( magSpect, freqVec, octSpace, centerFreq )
-%OCTAVEBANDMEAN Given a magnitude spectrum this function will calculate the average (single, third, nth) octave band magnitude
+% Given a magnitude spectrum this function will calculate the average (single, third, nth) octave band magnitude
 % 
 % Syntax:	[ MAGSPECT_OCT, FREQVEC_OCT ] = OCTAVEBANDMEAN( MAGSPECT, FREQVEC, OCTSPACE, CENTERFREQ )
 % 

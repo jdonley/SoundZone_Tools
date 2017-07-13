@@ -1,5 +1,5 @@
 function printHyperlink( URL, OptionalText )
-%PRINTHYPERLINK Prints a hyperlink to the command window
+% Prints a hyperlink to the command window
 % 
 % Syntax:	PRINTHYPERLINK( URL, OPTIONALTEXT)
 % 

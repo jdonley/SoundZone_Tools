@@ -1,5 +1,5 @@
 function [pesq_val]= pesq2(ref_sig, alt_sig, fs)
-%PESQ objective speech quality measure
+% Objective speech quality measure
 % ----------------------------------------------------------------------
 %            PESQ objective speech quality measure
 %

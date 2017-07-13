@@ -1,11 +1,11 @@
 function simpleWarning( warning_text, text_colour )
-%SIMPLEWARNING Prints a coloured warning without the location information
+% Prints a coloured warning without the location information
 %
 % Syntax:	SIMPLEWARNING(warning_text, text_colour)
 %
 % Inputs:
-% 	warning_text - 2D cell array of warning text,
-%                  each cell contains a line of text.
+% 	warning_text - 1D character array or 2D cell array of warning text
+%                  where each cell contains a line of text.
 % 	text_colour  - RGB text colour as 1x3 matrix.
 %
 % See also: warning, error, cprintf
@@ -21,6 +21,10 @@ function simpleWarning( warning_text, text_colour )
 
 if nargin < 2
     text_colour = [255,100,0]/255;
+end
+
+if ischar(warning_text)
+    warning_text = {warning_text ''};
 end
 
 if exist('cprintf','file')

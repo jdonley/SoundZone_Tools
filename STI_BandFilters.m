@@ -1,5 +1,5 @@
 function OctaveFilters = STI_BandFilters( N, fs )
-%STI_BandFilters Calculation of the Speech Transmission Index (STI) Band Filters
+% Calculation of the Speech Transmission Index (STI) Band Filters
 % 
 % Syntax:	OctaveFilters = STI_BandFilters( N, fs )
 %       This function calculates the Speech Transmission Index octave band 

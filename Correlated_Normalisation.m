@@ -1,5 +1,5 @@
-function [ X_Approx_Adjust, Scaling_Factor ] = Correlated_Normalisation( X, X_Approx )
-%CORRELATED_NORMALISATION Matches the amplitude of X using cross-correlation
+function [ X_Approx_Adjust, Scaling_Factor ] = correlated_normalisation( X, X_Approx )
+% Matches the amplitude of X using cross-correlation
 % 
 % Syntax:	[ X_Approx_Adjust, Scaling_Factor ] = CORRELATED_NORMALISATION( X, X_Approx )
 % 

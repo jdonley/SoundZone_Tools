@@ -1,5 +1,5 @@
 function [ res ] = pesq_mex_vec( reference_sig, degraded_sig, Fs )
-%PESQ_MEX_VEC Accepts vectors for a mex compiled version of the objective Perceptual Evaluation of Speech Quality measure
+% Accepts vectors for a mex compiled version of the objective Perceptual Evaluation of Speech Quality measure
 % 
 % Syntax:	[ res ] = pesq_mex_vec( reference_sig, degraded_sig, Fs )
 % 

@@ -1,5 +1,5 @@
 function wait_for_file( file_string )
-%WAIT_FOR_FILE A forceful method to wait for a file to finish being written to
+% A forceful method to wait for a file to finish being written to
 % 
 % Syntax:	wait_for_file( file_string )
 % 

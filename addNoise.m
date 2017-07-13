@@ -1,5 +1,5 @@
 function [x_n] = addNoise( x, level, type )
-%ADDNOISE Adds a given level and type of noise to a signal
+% Adds a given level and type of noise to a signal
 % 
 % Syntax:	[x_n] = ADDNOISE( x, level, type ) Pass the signal, x, level
 % and type of noise to the function and x_n will be the resulting signal

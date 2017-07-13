@@ -1,5 +1,5 @@
 function [ filt ] = IRcompactingKirkebyFilter( ir, ir_len, f_band, fs, reg )
-%COMPACTINGKIRKEBYFILTER
+% Compacting Kirkeby Filter
 
 % Regularisation parameter
 ereg = epsreg(ir_len*fs,f_band,fs,reg);

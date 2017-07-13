@@ -1,5 +1,5 @@
 function [n_] = generateNoise( x, level, type, add )
-%ADDNOISE Generates basic noise at a given level with the option to be additive
+% Generates basic noise at a given level with the option to be additive
 % 
 % Syntax:	[n_] = GENERATENOISE( x, level, type, add ) Pass the signal, x, level
 % and type of noise to the function and n_ will be the resulting noise.

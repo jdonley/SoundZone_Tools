@@ -1,5 +1,5 @@
 function [E,Eps] = COSHdist(H,P)
-%COSHDIST Finds the symmetric Itakura-Saito distance using the hyperbolic cosine function
+% Finds the symmetric Itakura-Saito distance using the hyperbolic cosine function
 % 
 % Syntax:	[OUTPUTARGS] = COSHDIST(INPUTARGS) Explain usage here
 % 

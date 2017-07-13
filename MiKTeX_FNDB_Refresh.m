@@ -1,5 +1,5 @@
 function [ res, cmd_out ] = MiKTeX_FNDB_Refresh( )
-%MiKTeX_FNDB_Refresh Function to refresh the File Name DataBase in MiKTeX
+% Function to refresh the File Name DataBase in MiKTeX
 % 
 % Syntax:	[ res, cmd_out ] = MiKTeX_FNDB_Refresh() This is used after
 % exporting a file (i.e. figure) to a tex directory so that a direct comilation

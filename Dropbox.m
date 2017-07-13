@@ -1,5 +1,5 @@
 function [ res, cmd_out ] = Dropbox( action )
-%DROPBOX Function to start and kill dropbox from MATLAB
+% Function to start and kill dropbox from MATLAB
 % 
 % Syntax:   [ res, cmd_out ] = Dropbox( action )
 % 

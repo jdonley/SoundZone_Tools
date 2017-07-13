@@ -1,5 +1,5 @@
 function [ STI_val, ALcons, STI_val_approx, ALcons_approx ] = STI( ImpulseResponse, fs, OctaveFilters )
-%STI Calculation of the Speech Transmission Index (STI)
+% Calculation of the Speech Transmission Index (STI)
 % 
 % Syntax:	[STI_val, ALcons, STI_val_approx, ALcons_approx] = STI(ImpulseResponse, fs, OctaveFilters)
 %       This function calculates the Speech Transmission Index from a given

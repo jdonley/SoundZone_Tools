@@ -1,5 +1,5 @@
 function [ interpolated_values,  interpolated_indices] = interpVal( values, index_values, desired_index_values )
-%INTERPVAL This function will interpolate from desired arbitrarily spaced index values
+% This function will interpolate from desired arbitrarily spaced index values
 % 
 % Syntax:	[ interpolated_values,  interpolated_indices] = interpVal( values, index_values, desired_index_values )
 % 

@@ -1,5 +1,5 @@
 function [irLin, irNonLin] = extractIR(sweep_response, invsweepfft)
-% EXTRACTIR Extract impulse response from swept-sine response.
+% Extract impulse response from swept-sine response.
 %   [irLin, irNonLin] = extractIR(sweep_response, invsweepfft) 
 %   Extracts the impulse response from the swept-sine response.  Use
 %   synthSweep.m first to create the stimulus; then pass it through the

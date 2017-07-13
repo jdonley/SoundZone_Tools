@@ -1,5 +1,5 @@
 function [stoi_PercCorr] = stoi_d2percCorr(stoi_d)
-%STOI_D2PERCCORR Converts the stoi measure, d, to percent words correct unit
+% Converts the stoi measure, d, to percent words correct unit
 % 
 % Syntax:	[stoi_PercCorr] = stoi_d2percCorr(stoi_d) 
 % 

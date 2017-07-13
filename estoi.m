@@ -1,5 +1,5 @@
 function d = estoi(x, y, fs_signal)
-%ESTOI Implementation of the Extended Short-Time Objective Intelligibility (ESTOI) predictor
+% Implementation of the Extended Short-Time Objective Intelligibility (ESTOI) predictor
 %   d = estoi(x, y, fs_signal) returns the output of the extended short-time
 %   objective intelligibility (ESTOI) predictor.
 %  
