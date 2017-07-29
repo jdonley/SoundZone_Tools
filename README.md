@@ -3,6 +3,7 @@ Sound Zone Tools is a collection of auxiliary MATLAB tools for soundfield reprod
 
 Don't forget to give appropriate reference to the code used, author details are usually found in the file's header.
 Enjoy!
+[![license](https://img.shields.io/github/license/JacobD10/SoundZone_Tools.svg?style=flat-square)](https://github.com/JacobD10/SoundZone_Tools/blob/master/LICENSE)
 
 File name | Description
 :--------:|------------
@@ -13,7 +14,7 @@ _buildDocumentation.m_ | Generates documentation HTML and builds MATLAB search d
 _buildReleaseZIP.m_ | Creates a ZIP file of all release dependencies for a main file
 _ConcatTIMITtalkers.m_ | Concatenates all the talkers from the TIMIT corpus into individual speech files 
 _confidence_intervals.m_ | Find the confidence intervals for a set of data for use with the errorbar function in MATLAB
-_correlated_normalisation.m_ | Matches the amplitude of X using cross-correlation
+_Correlated_Normalisation.m_ | Matches the amplitude of X using cross-correlation
 _COSHdist.m_ | Finds the symmetric Itakura-Saito distance using the hyperbolic cosine function
 _Dropbox.m_ | Function to start and kill dropbox from MATLAB
 _estoi.m_ | Implementation of the Extended Short-Time Objective Intelligibility (ESTOI) predictor
