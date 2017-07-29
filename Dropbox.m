@@ -9,7 +9,7 @@ function [ res, cmd_out ] = Dropbox( action )
 % Outputs: 
 % 	res - Command exit status
 % 	cmd_out - Output of the operating system command
- 
+% 
 % Author: Jacob Donley
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
