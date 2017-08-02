@@ -1,15 +1,21 @@
-function [ res ] = pesq_mex_vec( reference_sig, degraded_sig, Fs )
+function [ res ] = pesq_mex_vec( reference_sig, degraded_sig, Fs, modeOfOperation )
 % Accepts vectors for a mex compiled version of the objective Perceptual Evaluation of Speech Quality measure
 % 
 % Syntax:	[ res ] = pesq_mex_vec( reference_sig, degraded_sig, Fs )
 % 
 % Inputs: 
-% 	reference_sig - Reference (clean, talker, sender) speech signal
-% 	degraded_sig - Degraded (noisy, listener, receiver) speech signal
-% 	Fs - Sampling Frequency
+% 	  reference_sig - Reference (clean, talker, sender) speech signal
+% 	   degraded_sig - Degraded (noisy, listener, receiver) speech signal
+% 	             Fs - Sampling Frequency
+%   modeOfOperation - This optional string argument is used to specify
+%                     whether the PESQ mex function runs in narrowband,
+%                     wideband or both. The possible values are 
+%                     'narrowband', 'wideband' (default) or 'both'.
 % 
 % Outputs: 
-% 	res - MOS-LQO result for wideband
+% 	res - MOS-LQO result for given modeOfOperation (wideband by default). 
+%         If 'both' is specified as the modeOfOperation then res is a
+%         column vector of the format [narrowband_result; wideband_result].
 % 
 % See also: pesq2mos.m
 
@@ -17,8 +23,9 @@ function [ res ] = pesq_mex_vec( reference_sig, degraded_sig, Fs )
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
 % Copyright: Jacob Donley 2017
-% Date: 16 June 2016
-% Revision: 0.2
+% Date: 2 August 2017
+% Revision: 0.3 (2 August 2017)
+% Revision: 0.2 (16 June 2016)
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -31,6 +38,21 @@ classDirs = getClassDirs(funcPath);
 pesq_mex_ = str2func([classDirs funcName]);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+if nargin < 4
+    modeOfOperation = 'wideband';
+end
+
+switch lower(modeOfOperation)
+    case 'narrowband'
+        mOp = {''};
+    case 'wideband'
+        mOp = {'+wb'};
+    case 'both'
+        mOp = {'';'+wb'};
+    otherwise
+        error(['''' modeOfOperation ''' is not a recognised ''modeOfOperation'' value.'])
+end   
+
 max_val = max(abs([reference_sig(:); degraded_sig(:)]));
 
 tmpref = [tempname '.wav'];
@@ -39,11 +61,14 @@ tmpdeg = [tempname '.wav'];
 audiowrite( tmpref, reference_sig / max_val, Fs);
 audiowrite( tmpdeg, degraded_sig / max_val, Fs);
 
-res = pesq_mex_(['+' num2str(Fs)], ...
-                    '+wb', ...
-                    tmpref, ...
-                    tmpdeg);
-                
+for m = 1:numel(mOp)
+    pesqArgs = {['+' num2str(Fs)], ...
+                         mOp{m}, ...
+                         tmpref, ...
+                         tmpdeg};
+    res(m,:) = pesq_mex_(pesqArgs{~cellfun(@isempty,pesqArgs)});
+end
+
 delete( tmpref, tmpdeg );
 end
 
