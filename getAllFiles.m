@@ -25,9 +25,9 @@ function fileList = getAllFiles(dirPath)
 
 % Just incase this function tries to recursively call within a class folder we
 % should create a function handle for this function to use
-inf = dbstack('-completenames');
-funcName = inf.name;
-funcPath = inf.file;
+infun = dbstack('-completenames');
+funcName = infun.name;
+funcPath = infun.file;
 classDirs = getClassDirs(funcPath);
 thisFuncHandle = str2func([classDirs funcName]);
 

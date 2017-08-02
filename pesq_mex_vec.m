@@ -22,6 +22,15 @@ function [ res ] = pesq_mex_vec( reference_sig, degraded_sig, Fs )
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Just incase this function tries to call within a class folder we should 
+% create a function handle for this function to use instead
+infun = dbstack('-completenames');
+funcName = 'pesq_mex';
+funcPath = infun.file;
+classDirs = getClassDirs(funcPath);
+pesq_mex_ = str2func([classDirs funcName]);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 max_val = max(abs([reference_sig(:); degraded_sig(:)]));
 
 tmpref = [tempname '.wav'];
@@ -30,7 +39,7 @@ tmpdeg = [tempname '.wav'];
 audiowrite( tmpref, reference_sig / max_val, Fs);
 audiowrite( tmpdeg, degraded_sig / max_val, Fs);
 
-res = Tools.pesq_mex(['+' num2str(Fs)], ...
+res = pesq_mex_(['+' num2str(Fs)], ...
                     '+wb', ...
                     tmpref, ...
                     tmpdeg);
@@ -38,3 +47,12 @@ res = Tools.pesq_mex(['+' num2str(Fs)], ...
 delete( tmpref, tmpdeg );
 end
 
+function classDirs = getClassDirs(FullPath)
+    classDirs = '';
+    classes = strfind(FullPath,'+');
+    for c = 1:length(classes)
+        clas = FullPath(classes(c):end);
+        stp = strfind(clas,filesep);
+       classDirs = [classDirs  clas(2:stp(1)-1) '.'];
+    end
+end
