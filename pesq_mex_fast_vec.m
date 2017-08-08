@@ -32,7 +32,7 @@ function [ res ] = pesq_mex_fast_vec( reference_sig, degraded_sig, Fs, modeOfOpe
 % Just incase this function tries to call within a class folder we should 
 % create a function handle for this function to use instead
 infun = dbstack('-completenames');
-funcName = 'pesqmain_mex_fast_vec';
+funcName = 'pesq_mex_fast';
 funcPath = infun.file;
 classDirs = getClassDirs(funcPath);
 pesq_mex_ = str2func([classDirs funcName]);

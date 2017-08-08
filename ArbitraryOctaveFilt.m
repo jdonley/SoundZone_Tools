@@ -13,6 +13,16 @@ function y = ArbitraryOctaveFilt(x, SPECT, FREQS, N, fs, octBandwidth)
 % 
 % Outputs: 
 % 	y - Description
+%
+% Example: 
+%   fs = 16000;
+%   T = 10;
+%   N = 1000;
+%   f = linspace(0,fs/2,N);
+%   s = 1./f;
+%   x = wgn(T*fs,1,0);
+%   y = ArbitraryOctaveFilt(x,s,f,N,fs,1/3);
+%   pwelch([x y]);
 % 
 % See also: fir2, filter
 
