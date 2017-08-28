@@ -37,8 +37,10 @@ _MiKTeX\_FNDB\_Refresh.m_ | Function to refresh the File Name DataBase in MiKTeX
 _octaveBandMean.m_ | Given a magnitude spectrum this function will calculate the average (single, third, nth) octave band magnitude
 _pesq2.m_ | Objective speech quality measure
 _pesq3.m_ | A wrapper for the objective Perceptual Evaluation of Speech Quality measure
+_pesq\_mex\_fast\_vec.m_ | Accepts vectors for a mex compiled version of the objective Perceptual Evaluation of Speech Quality measure
 _pesq\_mex\_vec.m_ | Accepts vectors for a mex compiled version of the objective Perceptual Evaluation of Speech Quality measure
 _printHyperlink.m_ | Prints a hyperlink to the command window
+_repmatmatch.m_ | Replicate and tile an array to match the size of a given N-D array
 _shapeSpectrum.m_ | This function will shape an input signal to the given spectrum (simple, unregulated spectral shaping)
 _showTimeToCompletion.m_ | Prints the time to completion and expected finish of a looped simulation based on linear extrapolation.
 _simpleWarning.m_ | Prints a coloured warning without the location information

@@ -29,8 +29,9 @@ function RelFiles = buildReleaseZIP( WorkingDir, zipFileName, MainFile, RelFiles
 % University of Wollongong
 % Email: jrd089@uowmail.edu.au
 % Copyright: Jacob Donley 2017
-% Date: 07 May 2017
-% Version: 0.1 (07 May 2017)
+% Date: 09 August 2017
+% Version: 1.1 (09 August 2017)
+% Version: 1.0 (07 May 2017)
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
