@@ -1,5 +1,6 @@
 # Sound Zone Tools
-[![GitHub release](https://img.shields.io/github/release/JacobD10/SoundZone_Tools.svg?style=flat-square)](https://github.com/JacobD10/SoundZone_Tools/releases)[![GitHub commits](https://img.shields.io/github/commits-since/JacobD10/SoundZone_Tools/1.0.0-alpha.svg?style=flat-square)](https://github.com/JacobD10/SoundZone_Tools/commits/master)
+[![GitHub release](https://img.shields.io/github/release/JacobD10/SoundZone_Tools/all.svg?style=flat-square)](https://github.com/JacobD10/SoundZone_Tools/releases)
+[![GitHub commits](https://img.shields.io/github/commits-since/JacobD10/SoundZone_Tools/1.0.0-alpha.svg?style=flat-square)](https://github.com/JacobD10/SoundZone_Tools/commits/master)
 [![Hit Count](https://hitt.herokuapp.com/JacobD10/SoundZone_Tools.svg?style=flat-square)](https://github.com/JacobD10/SoundZone_Tools)
 [![Github file size](https://reposs.herokuapp.com/?path=JacobD10/SoundZone_Tools&style=flat-square)](https://github.com/JacobD10/SoundZone_Tools/archive/master.zip)
 [![license](https://img.shields.io/github/license/JacobD10/SoundZone_Tools.svg?style=flat-square)](https://github.com/JacobD10/SoundZone_Tools/blob/master/LICENSE)
