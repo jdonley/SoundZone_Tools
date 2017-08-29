@@ -1,12 +1,5 @@
 # Sound Zone Tools
-[![license](https://img.shields.io/github/license/JacobD10/SoundZone_Tools.svg?style=flat-square)](https://github.com/JacobD10/SoundZone_Tools/blob/master/LICENSE)
-
-Sound Zone Tools is a collection of auxiliary MATLAB tools for soundfield reproduction and other signal processing tasks. The tools have been written by myself or collected from other open sources. If a file is missing and there is no download link in the parent file's header, please open an issue to request the link.
-
-Don't forget to give appropriate reference to the code used, author details are usually found in the file's header.
-Enjoy!
-
-File name | Description
+[![Github All Releases](https://img.shields.io/github/downloads/JacobD10/SoundZone_Tools/total.svg?style=flat-square)](https://github.com/JacobD10/SoundZone_Tools)[![Github file size](https://img.shields.io/github/size/JacobD10/SoundZone_Tools/archive/master.zip.svg?style=flat-square)](https://github.com/JacobD10/SoundZone_Tools/archive/master.zip)[![license](https://img.shields.io/github/license/JacobD10/SoundZone_Tools.svg?style=flat-square)](https://github.com/JacobD10/SoundZone_Tools/blob/master/LICENSE)[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?url=httpsFile name | Description
 :--------:|------------
 _addNoise.m_ | Adds a given level and type of noise to a signal
 _ALcons2STI.m_ | Converts Articulation Loss of Consonants (ALcons) to the Speech Transmission Index (STI)
